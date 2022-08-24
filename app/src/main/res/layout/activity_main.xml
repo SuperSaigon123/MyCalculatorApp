@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFA500"
     tools:context=".MainActivity">
 
     <TextView
@@ -34,7 +35,6 @@
         android:id="@+id/plusButton"
         android:layout_width="75sp"
         android:layout_height="75sp"
-        android:onClick=""
         android:text="+"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
