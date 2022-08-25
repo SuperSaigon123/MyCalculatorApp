@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            int num1 = Integer.parseInt((number1ET.getText().toString()));
-            int num2 = Integer.parseInt((number2ET.getText().toString()));
-            int sum = num1 + num2;
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double sum = num1 + num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            int num1 = Integer.parseInt((number1ET.getText().toString()));
-            int num2 = Integer.parseInt((number2ET.getText().toString()));
-            int diff = num1 - num2;
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double diff = num1 - num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            int num1 = Integer.parseInt((number1ET.getText().toString()));
-            int num2 = Integer.parseInt((number2ET.getText().toString()));
-            int prod = num1 * num2;
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double prod = num1 * num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            int num1 = Integer.parseInt((number1ET.getText().toString()));
-            int num2 = Integer.parseInt((number2ET.getText().toString()));
-            int quo = num1 / num2;
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double quo = num1 / num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
