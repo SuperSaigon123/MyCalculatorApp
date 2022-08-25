@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         subButton.setOnClickListener(subOnClick);
         multButton.setOnClickListener(multOnClick);
         divButton.setOnClickListener(divOnClick);
+
     }
 
     private OnClickListener addOnClick = new OnClickListener(){
@@ -35,12 +36,26 @@ public class MainActivity extends AppCompatActivity {
             EditText number1ET = findViewById(R.id.firstNumber);
             EditText number2ET = findViewById(R.id.secondNumber);
             TextView numberSumTV = findViewById(R.id.answer);
+            numberSumTV.setVisibility(View.GONE);
+
+            Button calcButton = findViewById(R.id.calculateButton);
+            calcButton.setVisibility(View.GONE);
 
             int num1 = Integer.parseInt((number1ET.getText().toString()));
             int num2 = Integer.parseInt((number2ET.getText().toString()));
             int sum = num1 + num2;
 
-            numberSumTV.setText("" + sum);
+            if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
+                calcButton.setVisibility(View.VISIBLE);
+            }
+
+            calcButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    numberSumTV.setText("" + sum);
+                    numberSumTV.setVisibility(View.VISIBLE);
+                }
+            });
         }
 
     };
@@ -50,12 +65,26 @@ public class MainActivity extends AppCompatActivity {
             EditText number1ET = findViewById(R.id.firstNumber);
             EditText number2ET = findViewById(R.id.secondNumber);
             TextView numberDiffTV = findViewById(R.id.answer);
+            numberDiffTV.setVisibility(View.GONE);
+
+            Button calcButton = findViewById(R.id.calculateButton);
+            calcButton.setVisibility(View.GONE);
 
             int num1 = Integer.parseInt((number1ET.getText().toString()));
             int num2 = Integer.parseInt((number2ET.getText().toString()));
             int diff = num1 - num2;
 
-            numberDiffTV.setText("" + diff);
+            if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
+                calcButton.setVisibility(View.VISIBLE);
+            }
+
+            calcButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    numberDiffTV.setText("" + diff);
+                    numberDiffTV.setVisibility(View.VISIBLE);
+                }
+            });
         }
 
     };
@@ -65,12 +94,26 @@ public class MainActivity extends AppCompatActivity {
             EditText number1ET = findViewById(R.id.firstNumber);
             EditText number2ET = findViewById(R.id.secondNumber);
             TextView numberProdTV = findViewById(R.id.answer);
+            numberProdTV.setVisibility(View.GONE);
+
+            Button calcButton = findViewById(R.id.calculateButton);
+            calcButton.setVisibility(View.GONE);
 
             int num1 = Integer.parseInt((number1ET.getText().toString()));
             int num2 = Integer.parseInt((number2ET.getText().toString()));
             int prod = num1 * num2;
 
-            numberProdTV.setText("" + prod);
+            if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
+                calcButton.setVisibility(View.VISIBLE);
+            }
+
+            calcButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    numberProdTV.setText("" + prod);
+                    numberProdTV.setVisibility(View.VISIBLE);
+                }
+            });
         }
 
     };
@@ -80,16 +123,26 @@ public class MainActivity extends AppCompatActivity {
             EditText number1ET = findViewById(R.id.firstNumber);
             EditText number2ET = findViewById(R.id.secondNumber);
             TextView numberQuoTV = findViewById(R.id.answer);
+            numberQuoTV.setVisibility(View.GONE);
+
+            Button calcButton = findViewById(R.id.calculateButton);
+            calcButton.setVisibility(View.GONE);
 
             int num1 = Integer.parseInt((number1ET.getText().toString()));
             int num2 = Integer.parseInt((number2ET.getText().toString()));
             int quo = num1 / num2;
 
-            numberQuoTV.setText("" + quo);
+            if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
+                calcButton.setVisibility(View.VISIBLE);
+            }
+
+            calcButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    numberQuoTV.setText("" + quo);
+                    numberQuoTV.setVisibility(View.VISIBLE);
+                }
+            });
         }
     };
-
-    public TextView returnText(TextView t){
-        return t;
-    }
 }
