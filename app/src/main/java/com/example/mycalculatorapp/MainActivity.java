@@ -1,15 +1,19 @@
 package com.example.mycalculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.view.View;
 import android.os.Bundle;
 import android.view.View.OnClickListener;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
+
+    Integer decPlaces = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +45,19 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            double num1 = Double.parseDouble((number1ET.getText().toString()));
-            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double num1 = 0;
+            double num2 = 0;
+
+            try {
+                double newnum1 = Double.parseDouble((number1ET.getText().toString()));
+                double newnum2 = Double.parseDouble((number2ET.getText().toString()));
+                num1 = newnum1;
+                num2 = newnum2;
+            } catch (IllegalArgumentException e){
+                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
+                properNum.show();
+            }
+
             double sum = num1 + num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
@@ -70,9 +85,20 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            double num1 = Double.parseDouble((number1ET.getText().toString()));
-            double num2 = Double.parseDouble((number2ET.getText().toString()));
-            double diff = num1 - num2;
+            double num1 = 0;
+            double num2 = 0;
+
+            try {
+                double newnum1 = Double.parseDouble((number1ET.getText().toString()));
+                double newnum2 = Double.parseDouble((number2ET.getText().toString()));
+                num1 = newnum1;
+                num2 = newnum2;
+            } catch (IllegalArgumentException e){
+                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
+                properNum.show();
+            }
+
+            double diff = num1 + num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
@@ -99,8 +125,19 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            double num1 = Double.parseDouble((number1ET.getText().toString()));
-            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double num1 = 0;
+            double num2 = 0;
+
+            try {
+                double newnum1 = Double.parseDouble((number1ET.getText().toString()));
+                double newnum2 = Double.parseDouble((number2ET.getText().toString()));
+                num1 = newnum1;
+                num2 = newnum2;
+            } catch (IllegalArgumentException e){
+                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
+                properNum.show();
+            }
+
             double prod = num1 * num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
@@ -128,8 +165,19 @@ public class MainActivity extends AppCompatActivity {
             Button calcButton = findViewById(R.id.calculateButton);
             calcButton.setVisibility(View.GONE);
 
-            double num1 = Double.parseDouble((number1ET.getText().toString()));
-            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double num1 = 0;
+            double num2 = 0;
+
+            try {
+                double newnum1 = Double.parseDouble((number1ET.getText().toString()));
+                double newnum2 = Double.parseDouble((number2ET.getText().toString()));
+                num1 = newnum1;
+                num2 = newnum2;
+            } catch (IllegalArgumentException e){
+                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
+                properNum.show();
+            }
+
             double quo = num1 / num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
