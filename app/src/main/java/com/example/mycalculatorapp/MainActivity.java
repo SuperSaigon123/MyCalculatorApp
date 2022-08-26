@@ -14,7 +14,6 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     Integer decPlaces = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         divButton.setOnClickListener(divOnClick);
 
     }
-
+    //Concept and basic code for onClick and onClickListener from https://www.educative.io/answers/what-is-an-onclicklistener
     private OnClickListener addOnClick = new OnClickListener(){
         public void onClick(View v) {
             EditText number1ET = findViewById(R.id.firstNumber);
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             double num1 = 0;
             double num2 = 0;
 
+            //Information about snackbars from https://material.io/components/snackbars/android#theming-snackbars
             try {
                 double newnum1 = Double.parseDouble((number1ET.getText().toString()));
                 double newnum2 = Double.parseDouble((number2ET.getText().toString()));
