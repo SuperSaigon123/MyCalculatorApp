@@ -30,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <Button
         android:id="@+id/plusButton"
@@ -76,7 +76,7 @@
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:text="➖"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.739"
@@ -95,7 +95,7 @@
         app:layout_constraintHorizontal_bias="0.276"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.979" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <Button
         android:id="@+id/calculateButton"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.85" />
 
     <EditText
         android:id="@+id/firstNumber"
@@ -134,16 +134,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
-
-    <EditText
-        android:id="@+id/decPlacesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:hint="# of decimal places"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintVertical_bias="0.272" />   
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
