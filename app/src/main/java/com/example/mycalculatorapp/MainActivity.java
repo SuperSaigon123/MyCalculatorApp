@@ -88,17 +88,21 @@ public class MainActivity extends AppCompatActivity {
             double num1 = 0;
             double num2 = 0;
 
-            try {
-                double newnum1 = Double.parseDouble((number1ET.getText().toString()));
-                double newnum2 = Double.parseDouble((number2ET.getText().toString()));
-                num1 = newnum1;
-                num2 = newnum2;
-            } catch (IllegalArgumentException e){
-                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
-                properNum.show();
+            boolean isDone = false;
+            while (!isDone){
+                try {
+                    double newnum1 = Double.parseDouble((number1ET.getText().toString()));
+                    double newnum2 = Double.parseDouble((number2ET.getText().toString()));
+                    num1 = newnum1;
+                    num2 = newnum2;
+                    isDone = true;
+                } catch (IllegalArgumentException e){
+                    Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
+                    properNum.show();
+                }
             }
 
-            double diff = num1 + num2;
+            double diff = num1 - num2;
 
             if (!(number1ET.toString().equals("")) && (!(number2ET.toString().equals("")))){
                 calcButton.setVisibility(View.VISIBLE);
@@ -134,8 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = newnum1;
                 num2 = newnum2;
             } catch (IllegalArgumentException e){
-                Snackbar properNum = Snackbar.make(v, "Please enter a decimal", 5000);
-                properNum.show();
+                Snackbar.make(v, "Please enter a decimal", 5000).show();
             }
 
             double prod = num1 * num2;
